@@ -1,0 +1,28 @@
+diff --git a/gpsoauth/google.py b/gpsoauth/google.py
+index 4901e16..bbb7728 100644
+--- a/gpsoauth/google.py
++++ b/gpsoauth/google.py
+@@ -1,8 +1,8 @@
+ import base64
+ import hashlib
+ 
+-from Cryptodome.PublicKey import RSA
+-from Cryptodome.Cipher import PKCS1_OAEP
++from Crypto.PublicKey import RSA
++from Crypto.Cipher import PKCS1_OAEP
+ 
+ from .util import bytes_to_long, long_to_bytes
+ 
+diff --git a/setup.py b/setup.py
+index 00cae0a..93f1844 100644
+--- a/setup.py
++++ b/setup.py
+@@ -34,7 +34,7 @@ setup(
+     packages=['gpsoauth'],
+     include_package_data=True,
+     install_requires=[
+-        'pycryptodomex >= 3.0',
++        'pycryptodome >= 3.0',
+         'requests',
+     ],
+     license='MIT',
